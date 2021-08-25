@@ -13,7 +13,7 @@ namespace Loops2
             {
                 examCount++;
                 Console.WriteLine($"Please enter your score for Exam {examCount.ToString("N0")} (e.g. 90% = .9) >>");
-                sum = Convert.ToDouble(Console.ReadLine());
+                sum += Convert.ToDouble(Console.ReadLine());
 
                 Console.WriteLine("Do you have another score to enter? Yes or No >>");
             } while (Console.ReadLine().ToLower()[0] == 'y');
