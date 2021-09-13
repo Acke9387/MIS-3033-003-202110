@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Label Content="SoonerID:" HorizontalAlignment="Left" Margin="45,54,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtID" HorizontalAlignment="Left" Margin="138,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="First Name:" HorizontalAlignment="Left" Margin="37,90,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Margin="138,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Last Name:" HorizontalAlignment="Left" Margin="38,134,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Margin="138,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Bursar Balance:" HorizontalAlignment="Left" Margin="17,251,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBursar" HorizontalAlignment="Left" Margin="138,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="GPA:" HorizontalAlignment="Left" Margin="72,213,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtGPA" HorizontalAlignment="Left" Margin="138,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAdd" Content="Add Student" HorizontalAlignment="Left" Margin="107,314,0,0" VerticalAlignment="Top" Height="57" Width="126" IsDefault="True" Click="btnAdd_Click"/>
+        <ListBox x:Name="lstStudents" Margin="306,0,0,0" SelectionChanged="lstStudents_SelectionChanged"/>
+        <CheckBox x:Name="chkProbation" Content="Are they on Probation?" HorizontalAlignment="Left" Margin="138,179,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
