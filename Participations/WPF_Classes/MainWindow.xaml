@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPF_Classes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Classes"
+        mc:Ignorable="d"
+        Title="OU Toy Store!" Height="450" Width="800">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF15A2E4" Offset="0.939"/>
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="#FF0F6B97" Offset="0.299"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <GroupBox Header="Create Toy" Margin="13,89,431,36" Foreground="#FFFDFDFD"/>
+
+        <Label Content="OU Toy Store" HorizontalAlignment="Left" Margin="260,26,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFFDFDFD"/>
+        <TextBox x:Name="txtManufacturer" HorizontalAlignment="Left" Margin="157,136,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Manufacturer:" HorizontalAlignment="Left" Margin="47,132,0,0" VerticalAlignment="Top" Foreground="#FFFDFDFD"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="157,171,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="86,163,0,0" VerticalAlignment="Top" Foreground="#FFFDFDFD"/>
+        <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Margin="157,0,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="44"/>
+        <Label Content="Price:" HorizontalAlignment="Left" Margin="92,0,0,0" VerticalAlignment="Center" Foreground="#FFFDFDFD"/>
+        <TextBox x:Name="txtImage" HorizontalAlignment="Left" Margin="157,248,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Image:" HorizontalAlignment="Left" Margin="85,244,0,0" VerticalAlignment="Top" Foreground="#FFFDFDFD"/>
+        <Button x:Name="btnAdd" Content="Add Toy" HorizontalAlignment="Left" Margin="157,305,0,0" VerticalAlignment="Top" Height="64" Width="120" IsDefault="True"/>
+        <ListBox x:Name="lstToys" Margin="444,97,32,164" Background="#7FFFFFFF" Foreground="#FFFFFCFC" />
+        <Image x:Name="imgToy" Margin="450,277,38,9" Stretch="UniformToFill"/>
+
+
+    </Grid>
+</Window>
