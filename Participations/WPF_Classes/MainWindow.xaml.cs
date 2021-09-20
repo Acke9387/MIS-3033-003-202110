@@ -24,5 +24,59 @@ namespace WPF_Classes
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            bool isValid = true;
+            if (string.IsNullOrWhiteSpace(txtImage.Text) == true)
+            {
+                isValid = false;
+                MessageBox.Show("Invalid entry for Image.");
+            }
+
+            if (string.IsNullOrWhiteSpace(txtManufacturer.Text) == true)
+            {
+                isValid = false;
+                MessageBox.Show("Invalid entry for Manufacturer.");
+            }
+
+            if (string.IsNullOrWhiteSpace(txtName.Text) == true)
+            {
+                isValid = false;
+                MessageBox.Show("Invalid entry for Name.");
+            }
+            double price;
+            if (double.TryParse(txtPrice.Text, out price) == false)
+            {
+                isValid = false;
+                //txtPrice.Text = "";// string.Empty;
+                MessageBox.Show("Invalid entry for Price.");
+            }
+
+            if (isValid == false)
+            {
+                return;
+            }
+
+            //Toy t = new Toy(txtName.Text, txtManufacturer.Text, txtImage.Text, price);
+            Toy t = new Toy();
+            t.Image = txtImage.Text;
+            t.Manufacturer = txtManufacturer.Text;
+            t.Name = txtName.Text;
+            t.Price = price;
+
+            lstToys.Items.Add(t);
+        }
+
+        private void lstToys_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Toy selectedToy = (Toy)lstToys.SelectedItem;
+            MessageBox.Show(selectedToy.GetAisle());
+
+            var uri = new Uri(selectedToy.Image);
+            var img = new BitmapImage(uri);
+
+            imgToy.Source = img;
+        }
     }
 }
