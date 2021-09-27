@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Classes", "WPF_Classes\WPF_Classes.csproj", "{64968665-06F7-4504-85B5-8EF74CC84F25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Files", "WPF_Files\WPF_Files.csproj", "{7B4412C4-7064-4F2A-B1F1-9AA8E5E6059E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Files", "WPF_Files\WPF_Files.csproj", "{7B4412C4-7064-4F2A-B1F1-9AA8E5E6059E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON_RickAndMorty", "JSON_RickAndMorty\JSON_RickAndMorty.csproj", "{D77F75B7-7368-4183-85C5-060FD6B41AFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7B4412C4-7064-4F2A-B1F1-9AA8E5E6059E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B4412C4-7064-4F2A-B1F1-9AA8E5E6059E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B4412C4-7064-4F2A-B1F1-9AA8E5E6059E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D77F75B7-7368-4183-85C5-060FD6B41AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D77F75B7-7368-4183-85C5-060FD6B41AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D77F75B7-7368-4183-85C5-060FD6B41AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D77F75B7-7368-4183-85C5-060FD6B41AFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
