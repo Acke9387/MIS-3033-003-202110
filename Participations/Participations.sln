@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF-Vowels_and_Consonants",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Classes", "WPF_Classes\WPF_Classes.csproj", "{E79EC547-99A5-4B9F-B1E5-F494F326C412}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_ContactList", "WPF_ContactList\WPF_ContactList.csproj", "{D967C3CF-DE9D-4A7F-9FE6-F54818AD7371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ContactList", "WPF_ContactList\WPF_ContactList.csproj", "{D967C3CF-DE9D-4A7F-9FE6-F54818AD7371}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON-Chuck_Norris_Jokes", "JSON-Chuck_Norris_Jokes\JSON-Chuck_Norris_Jokes.csproj", "{F8BCD46A-C5DB-4298-ACB1-3BA7F5E3F31B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D967C3CF-DE9D-4A7F-9FE6-F54818AD7371}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D967C3CF-DE9D-4A7F-9FE6-F54818AD7371}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D967C3CF-DE9D-4A7F-9FE6-F54818AD7371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8BCD46A-C5DB-4298-ACB1-3BA7F5E3F31B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8BCD46A-C5DB-4298-ACB1-3BA7F5E3F31B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8BCD46A-C5DB-4298-ACB1-3BA7F5E3F31B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8BCD46A-C5DB-4298-ACB1-3BA7F5E3F31B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
