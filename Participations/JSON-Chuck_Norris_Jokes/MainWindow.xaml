@@ -13,6 +13,10 @@
         <Label Content="Select a joke category:" HorizontalAlignment="Left" Margin="55,61,0,0" VerticalAlignment="Top" Height="27" Width="165" Background="#AAF03939" Foreground="#FF6D9CEE" FontSize="14"/>
         <ComboBox x:Name="cboCategories" HorizontalAlignment="Left" Margin="80,108,0,0" VerticalAlignment="Top" Width="140" Height="28"/>
         <TextBlock Margin="80,217,104,30" Text="TextBlock" TextWrapping="Wrap" Background="#AAF03939" Foreground="#FF295CB6" FontSize="14" FontWeight="Bold"/>
-
+        <Button Content="Get a joke" HorizontalAlignment="Left" Margin="524,23,0,0" VerticalAlignment="Top" Height="151" Width="204" FontWeight="Bold" FontSize="24">
+            <Button.Background>
+                <ImageBrush ImageSource="https://m.media-amazon.com/images/I/61rt+dzyi9L._AC_.jpg" Opacity="0.7"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
