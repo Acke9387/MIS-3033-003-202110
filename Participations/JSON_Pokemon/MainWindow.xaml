@@ -1,0 +1,20 @@
+﻿<Window x:Class="JSON_Pokemon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JSON_Pokemon"
+        mc:Ignorable="d"
+        Title="Pokedex" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="https://static.planetminecraft.com/files/resource_media/screenshot/1135/Day%202%205_399043.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Image x:Name="imgPokemon" Margin="268,160,0,0" HorizontalAlignment="Left" Width="270" Height="142" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboPokies" HorizontalAlignment="Left" Margin="76,82,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cboPokies_SelectionChanged"/>
+        <Label Content="Select a pokie" HorizontalAlignment="Left" Margin="54,34,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Background="#FFC50C0C"/>
+        <Label x:Name="lblPokemonName" Content="" HorizontalAlignment="Left" Margin="283,60,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Background="#FFC50C0C" Width="227"/>
+        <Button x:Name="btnToggle" Content="Toggle" HorizontalAlignment="Center" Margin="0,357,0,0" VerticalAlignment="Top" Click="btnToggle_Click"/>
+
+    </Grid>
+</Window>
