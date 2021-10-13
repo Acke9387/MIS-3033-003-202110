@@ -9,6 +9,7 @@ namespace JSON_RickAndMorty
 
         public Info info { get; set; }
         public List<Character> results { get; set; }
+
     }
 
     public class Character
