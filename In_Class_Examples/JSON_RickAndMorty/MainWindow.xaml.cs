@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -37,6 +38,13 @@ namespace JSON_RickAndMorty
                     string jsonData = client.GetStringAsync(url).Result;
 
                     RickAndMortyAPI api = JsonConvert.DeserializeObject<RickAndMortyAPI>(jsonData);
+
+                    // This is in a different button click later on
+                    string json = JsonConvert.SerializeObject(api);
+
+                    File.WriteAllText("", json);
+
+
                     foreach (Character item in api.results)
                     {
                         cboCharacters.Items.Add(item);
