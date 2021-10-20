@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSON-Chuck_Norris_Jokes", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSON_Pokemon", "JSON_Pokemon\JSON_Pokemon.csproj", "{5EE708D4-B39D-4B5E-9E0D-F0D4F4EB5EA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON_GOT", "JSON_GOT\JSON_GOT.csproj", "{8BFC460B-0969-49D8-A78E-960D9FC2C9CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSON_GOT", "JSON_GOT\JSON_GOT.csproj", "{8BFC460B-0969-49D8-A78E-960D9FC2C9CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON_Serialization", "JSON_Serialization\JSON_Serialization.csproj", "{2353CDEE-AEF3-457A-B57E-A1EDC48A38F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{8BFC460B-0969-49D8-A78E-960D9FC2C9CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BFC460B-0969-49D8-A78E-960D9FC2C9CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BFC460B-0969-49D8-A78E-960D9FC2C9CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2353CDEE-AEF3-457A-B57E-A1EDC48A38F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2353CDEE-AEF3-457A-B57E-A1EDC48A38F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2353CDEE-AEF3-457A-B57E-A1EDC48A38F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2353CDEE-AEF3-457A-B57E-A1EDC48A38F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
