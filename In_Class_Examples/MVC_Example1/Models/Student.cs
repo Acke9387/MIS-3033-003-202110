@@ -10,7 +10,6 @@ namespace MVC_Example1.Models
     {
         public string FirstName { get; set; }
 
-        [DisplayName("TA Last Name")]
         public string LastName { get; set; }
 
         public int SoonerID { get; set; }

@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSON_Pokemon", "JSON_Pokemo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSON_GOT", "JSON_GOT\JSON_GOT.csproj", "{8BFC460B-0969-49D8-A78E-960D9FC2C9CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON_Serialization", "JSON_Serialization\JSON_Serialization.csproj", "{2353CDEE-AEF3-457A-B57E-A1EDC48A38F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSON_Serialization", "JSON_Serialization\JSON_Serialization.csproj", "{2353CDEE-AEF3-457A-B57E-A1EDC48A38F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_EF", "MVC_EF\MVC_EF.csproj", "{E470CE35-A300-4D34-8AD4-4D9D7F0DD7C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{2353CDEE-AEF3-457A-B57E-A1EDC48A38F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2353CDEE-AEF3-457A-B57E-A1EDC48A38F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2353CDEE-AEF3-457A-B57E-A1EDC48A38F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E470CE35-A300-4D34-8AD4-4D9D7F0DD7C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E470CE35-A300-4D34-8AD4-4D9D7F0DD7C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E470CE35-A300-4D34-8AD4-4D9D7F0DD7C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E470CE35-A300-4D34-8AD4-4D9D7F0DD7C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

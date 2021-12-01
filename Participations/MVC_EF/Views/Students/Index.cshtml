@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MVC_EF.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+    string backColor = "red";
+}
+
+<h2>All Students</h2>
+
+
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <a href="/Students/Details/@item.StudentID" style="text-decoration:none;">
+                    <div class="card student" style="width: 18rem; text-decoration: none; background-color: @backColor; color: white;">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.LastName, @item.FirstName</h5>
+                            <p class="card-text">My favorite color is @item.FavoriteColor!  I am enrolled in @item.Registrations.Count.ToString() classes!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            if (backColor == "red")
+            {
+                backColor = "green";
+            }
+            else
+            {
+                backColor = "red";
+            }
+        }
+
+    </div>
+</div>
