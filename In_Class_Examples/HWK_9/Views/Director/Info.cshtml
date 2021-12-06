@@ -1,0 +1,20 @@
+﻿@model HWK_9.Models.Director
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Info</h2>
+<h3>Director @Model.Director_Name</h3>
+
+<p>
+    Movies directed include:
+    <ul>
+        @foreach (var movie in Model.Movies)
+        {
+            <li>
+                <a target="_blank" href="@movie.movie_imdb_link">@movie.movie_title</a> that came out in @movie.title_year
+            </li>
+        }
+    </ul>
+</p>

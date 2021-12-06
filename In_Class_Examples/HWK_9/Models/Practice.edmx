@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_128040_practiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Director">
+          <Key>
+            <PropertyRef Name="Director_Id" />
+          </Key>
+          <Property Name="Director_Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Director_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Movie">
+          <Key>
+            <PropertyRef Name="Movie_Id" />
+          </Key>
+          <Property Name="Movie_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="director_id" Type="int" Nullable="false" />
+          <Property Name="color" Type="nvarchar" MaxLength="150" />
+          <Property Name="num_critic_for_reviews" Type="int" />
+          <Property Name="duration" Type="int" />
+          <Property Name="director_facebook_likes" Type="int" />
+          <Property Name="actor_3_facebook_likes" Type="int" />
+          <Property Name="actor_2_name" Type="nvarchar" MaxLength="150" />
+          <Property Name="actor_1_facebook_likes" Type="int" />
+          <Property Name="gross" Type="bigint" />
+          <Property Name="genres" Type="nvarchar" MaxLength="150" />
+          <Property Name="actor_1_name" Type="nvarchar" MaxLength="150" />
+          <Property Name="movie_title" Type="nvarchar" MaxLength="150" />
+          <Property Name="num_voted_users" Type="int" />
+          <Property Name="cast_total_facebook_likes" Type="int" />
+          <Property Name="actor_3_name" Type="nvarchar" MaxLength="150" />
+          <Property Name="facenumber_in_poster" Type="int" />
+          <Property Name="plot_keywords" Type="nvarchar" MaxLength="150" />
+          <Property Name="movie_imdb_link" Type="nvarchar" MaxLength="150" />
+          <Property Name="num_user_for_reviews" Type="int" />
+          <Property Name="language" Type="nvarchar" MaxLength="150" />
+          <Property Name="country" Type="nvarchar" MaxLength="150" />
+          <Property Name="content_rating" Type="nvarchar" MaxLength="150" />
+          <Property Name="budget" Type="bigint" />
+          <Property Name="title_year" Type="int" />
+          <Property Name="actor_2_facebook_likes" Type="int" />
+          <Property Name="imdb_score" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="aspect_ratio" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="movie_facebook_likes" Type="int" />
+        </EntityType>
+        <Association Name="FK_Movie_Director">
+          <End Role="Director" Type="Self.Director" Multiplicity="1" />
+          <End Role="Movie" Type="Self.Movie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Director">
+              <PropertyRef Name="Director_Id" />
+            </Principal>
+            <Dependent Role="Movie">
+              <PropertyRef Name="director_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_128040_practiceModelStoreContainer">
+          <EntitySet Name="Director" EntityType="Self.Director" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Movie" EntityType="Self.Movie" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Movie_Director" Association="Self.FK_Movie_Director">
+            <End Role="Director" EntitySet="Director" />
+            <End Role="Movie" EntitySet="Movie" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_128040_practiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Director">
+          <Key>
+            <PropertyRef Name="Director_Id" />
+          </Key>
+          <Property Name="Director_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Director_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Movies" Relationship="Self.FK_Movie_Director" FromRole="Director" ToRole="Movie" />
+        </EntityType>
+        <EntityType Name="Movie">
+          <Key>
+            <PropertyRef Name="Movie_Id" />
+          </Key>
+          <Property Name="Movie_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="director_id" Type="Int32" Nullable="false" />
+          <Property Name="color" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="num_critic_for_reviews" Type="Int32" />
+          <Property Name="duration" Type="Int32" />
+          <Property Name="director_facebook_likes" Type="Int32" />
+          <Property Name="actor_3_facebook_likes" Type="Int32" />
+          <Property Name="actor_2_name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="actor_1_facebook_likes" Type="Int32" />
+          <Property Name="gross" Type="Int64" />
+          <Property Name="genres" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="actor_1_name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="movie_title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="num_voted_users" Type="Int32" />
+          <Property Name="cast_total_facebook_likes" Type="Int32" />
+          <Property Name="actor_3_name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="facenumber_in_poster" Type="Int32" />
+          <Property Name="plot_keywords" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="movie_imdb_link" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="num_user_for_reviews" Type="Int32" />
+          <Property Name="language" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="country" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="content_rating" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="budget" Type="Int64" />
+          <Property Name="title_year" Type="Int32" />
+          <Property Name="actor_2_facebook_likes" Type="Int32" />
+          <Property Name="imdb_score" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="aspect_ratio" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="movie_facebook_likes" Type="Int32" />
+          <NavigationProperty Name="Director" Relationship="Self.FK_Movie_Director" FromRole="Movie" ToRole="Director" />
+        </EntityType>
+        <Association Name="FK_Movie_Director">
+          <End Role="Director" Type="Self.Director" Multiplicity="1" />
+          <End Role="Movie" Type="Self.Movie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Director">
+              <PropertyRef Name="Director_Id" />
+            </Principal>
+            <Dependent Role="Movie">
+              <PropertyRef Name="director_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_128040_practiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Directors" EntityType="Self.Director" />
+          <EntitySet Name="Movies" EntityType="Self.Movie" />
+          <AssociationSet Name="FK_Movie_Director" Association="Self.FK_Movie_Director">
+            <End Role="Director" EntitySet="Directors" />
+            <End Role="Movie" EntitySet="Movies" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_128040_practiceModelStoreContainer" CdmEntityContainer="DB_128040_practiceEntities">
+          <EntitySetMapping Name="Directors">
+            <EntityTypeMapping TypeName="DB_128040_practiceModel.Director">
+              <MappingFragment StoreEntitySet="Director">
+                <ScalarProperty Name="Director_Name" ColumnName="Director_Name" />
+                <ScalarProperty Name="Director_Id" ColumnName="Director_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Movies">
+            <EntityTypeMapping TypeName="DB_128040_practiceModel.Movie">
+              <MappingFragment StoreEntitySet="Movie">
+                <ScalarProperty Name="Movie_Id" ColumnName="Movie_Id" />
+                <ScalarProperty Name="director_id" ColumnName="director_id" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="num_critic_for_reviews" ColumnName="num_critic_for_reviews" />
+                <ScalarProperty Name="duration" ColumnName="duration" />
+                <ScalarProperty Name="director_facebook_likes" ColumnName="director_facebook_likes" />
+                <ScalarProperty Name="actor_3_facebook_likes" ColumnName="actor_3_facebook_likes" />
+                <ScalarProperty Name="actor_2_name" ColumnName="actor_2_name" />
+                <ScalarProperty Name="actor_1_facebook_likes" ColumnName="actor_1_facebook_likes" />
+                <ScalarProperty Name="gross" ColumnName="gross" />
+                <ScalarProperty Name="genres" ColumnName="genres" />
+                <ScalarProperty Name="actor_1_name" ColumnName="actor_1_name" />
+                <ScalarProperty Name="movie_title" ColumnName="movie_title" />
+                <ScalarProperty Name="num_voted_users" ColumnName="num_voted_users" />
+                <ScalarProperty Name="cast_total_facebook_likes" ColumnName="cast_total_facebook_likes" />
+                <ScalarProperty Name="actor_3_name" ColumnName="actor_3_name" />
+                <ScalarProperty Name="facenumber_in_poster" ColumnName="facenumber_in_poster" />
+                <ScalarProperty Name="plot_keywords" ColumnName="plot_keywords" />
+                <ScalarProperty Name="movie_imdb_link" ColumnName="movie_imdb_link" />
+                <ScalarProperty Name="num_user_for_reviews" ColumnName="num_user_for_reviews" />
+                <ScalarProperty Name="language" ColumnName="language" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="content_rating" ColumnName="content_rating" />
+                <ScalarProperty Name="budget" ColumnName="budget" />
+                <ScalarProperty Name="title_year" ColumnName="title_year" />
+                <ScalarProperty Name="actor_2_facebook_likes" ColumnName="actor_2_facebook_likes" />
+                <ScalarProperty Name="imdb_score" ColumnName="imdb_score" />
+                <ScalarProperty Name="aspect_ratio" ColumnName="aspect_ratio" />
+                <ScalarProperty Name="movie_facebook_likes" ColumnName="movie_facebook_likes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
